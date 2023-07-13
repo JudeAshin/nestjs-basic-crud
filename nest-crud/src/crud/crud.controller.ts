@@ -12,6 +12,8 @@ export class CrudController {
     return this.crudService.create(CrudDto)
   }
 
+
+
   @Get()
   async getallcrud(): Promise<CET[]> {
     // 400 Error
@@ -25,6 +27,8 @@ export class CrudController {
 
   @Get(':id')
   async getById(@Param('id') id: number): Promise<CET> {
+
+    
     // throw new HttpException('Forbidden',HttpStatus.FORBIDDEN)
     return this.crudService.findOne(id);
     
