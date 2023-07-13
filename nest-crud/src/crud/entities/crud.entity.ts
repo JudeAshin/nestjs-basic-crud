@@ -20,6 +20,9 @@ export class CET extends Model<InferCreationAttributes<CET>, InferAttributes<CET
     @Column
     role: string;
 
+    @Column
+    dob: string;
+
     @Column({ defaultValue: false })
     isDeleted: boolean;
 
