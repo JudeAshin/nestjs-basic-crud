@@ -7,9 +7,11 @@ import { SequelizeModule } from '@nestjs/sequelize/dist';
 //import { LoggerMiddleware } from './logger.middleware';
 import { CrudController } from './crud/crud.controller';
 // import { logger } from './logger.middleware';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [SequelizeModule.forRoot(config), CrudModule],
+  imports: [SequelizeModule.forRoot(config), CrudModule, AuthModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })
